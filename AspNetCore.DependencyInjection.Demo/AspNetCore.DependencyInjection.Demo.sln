@@ -1,26 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25402.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F8838164-CC33-4784-83EF-BEA165388F71}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F2657AE2-8886-4E61-A370-1305201B25DB}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Environments", "src\Environments\Environments.csproj", "{4130DBB9-6C00-4D43-B1BA-7EBB2B9FBCB6}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Environments", "src\Environments\Environments.xproj", "{4130DBB9-6C00-4D43-B1BA-7EBB2B9FBCB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpContext", "src\HttpContext\HttpContext.csproj", "{E99B1CE9-492A-4CF9-892C-752927ECF69D}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HttpContext", "src\HttpContext\HttpContext.xproj", "{E99B1CE9-492A-4CF9-892C-752927ECF69D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configuration", "src\Configuration\Configuration.csproj", "{B530EF19-AF4B-4DC5-9E45-3DF6B8D482A9}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Configuration", "src\Configuration\Configuration.xproj", "{B530EF19-AF4B-4DC5-9E45-3DF6B8D482A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "src\Services\Services.csproj", "{7CD0BE75-E19E-4482-858E-D6B791B5B06E}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ResolveByName", "src\ResolveByName\ResolveByName.xproj", "{5A09A2AC-0A16-457C-BCB2-245A744B4687}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResolveAllServices", "src\ResolveAllServices\ResolveAllServices.csproj", "{E7194B88-CB3C-409A-8239-C273C94BD4F8}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Services", "src\Services\Services.xproj", "{7CD0BE75-E19E-4482-858E-D6B791B5B06E}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ResolveAllServices", "src\ResolveAllServices\ResolveAllServices.xproj", "{E7194B88-CB3C-409A-8239-C273C94BD4F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResolveByName", "src\ResolveByName\ResolveByName.csproj", "{1DA75E2B-EA56-4810-B6CD-DC6B0850DC75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,10 +35,6 @@ Global
 		{B530EF19-AF4B-4DC5-9E45-3DF6B8D482A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B530EF19-AF4B-4DC5-9E45-3DF6B8D482A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B530EF19-AF4B-4DC5-9E45-3DF6B8D482A9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5A09A2AC-0A16-457C-BCB2-245A744B4687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A09A2AC-0A16-457C-BCB2-245A744B4687}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A09A2AC-0A16-457C-BCB2-245A744B4687}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A09A2AC-0A16-457C-BCB2-245A744B4687}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7CD0BE75-E19E-4482-858E-D6B791B5B06E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7CD0BE75-E19E-4482-858E-D6B791B5B06E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CD0BE75-E19E-4482-858E-D6B791B5B06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -52,6 +43,10 @@ Global
 		{E7194B88-CB3C-409A-8239-C273C94BD4F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7194B88-CB3C-409A-8239-C273C94BD4F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7194B88-CB3C-409A-8239-C273C94BD4F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DA75E2B-EA56-4810-B6CD-DC6B0850DC75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DA75E2B-EA56-4810-B6CD-DC6B0850DC75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DA75E2B-EA56-4810-B6CD-DC6B0850DC75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DA75E2B-EA56-4810-B6CD-DC6B0850DC75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,8 +55,11 @@ Global
 		{4130DBB9-6C00-4D43-B1BA-7EBB2B9FBCB6} = {F8838164-CC33-4784-83EF-BEA165388F71}
 		{E99B1CE9-492A-4CF9-892C-752927ECF69D} = {F8838164-CC33-4784-83EF-BEA165388F71}
 		{B530EF19-AF4B-4DC5-9E45-3DF6B8D482A9} = {F8838164-CC33-4784-83EF-BEA165388F71}
-		{5A09A2AC-0A16-457C-BCB2-245A744B4687} = {F8838164-CC33-4784-83EF-BEA165388F71}
 		{7CD0BE75-E19E-4482-858E-D6B791B5B06E} = {F8838164-CC33-4784-83EF-BEA165388F71}
 		{E7194B88-CB3C-409A-8239-C273C94BD4F8} = {F8838164-CC33-4784-83EF-BEA165388F71}
+		{1DA75E2B-EA56-4810-B6CD-DC6B0850DC75} = {F8838164-CC33-4784-83EF-BEA165388F71}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B05A1FD3-A9E2-4609-BA30-7D8F84C5FC50}
 	EndGlobalSection
 EndGlobal

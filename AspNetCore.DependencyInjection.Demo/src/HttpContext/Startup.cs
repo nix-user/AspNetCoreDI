@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Services;
@@ -10,8 +11,8 @@ namespace HttpContext
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddHttpContextAccessor();
 
-            services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<LocalhostService>();
             services.AddScoped<CloudService>();
 
@@ -21,11 +22,11 @@ namespace HttpContext
 
                 if (httpContext == null)
                 {
-                    // Разрешение сервиса происходит не в рамках HTTP запроса
+                    // Not HTTP request
                     return null;
                 }
 
-                //// Можно использовать любые данные запроса
+                //// Use any request data
 
                 //var queryString = httpContext.Request.Query;
 
@@ -33,7 +34,7 @@ namespace HttpContext
                 //    ? serviceProvider.GetService<LocalhostService>() as IService
                 //    : serviceProvider.GetService<CloudService>() as IService;
 
-                //if (httpContext.Request.ContentType == "text/html")
+                //if (httpContext.Request.ContentType == "application/x-www-form-urlencoded")
                 //{
                 //    var formValues = httpContext.Request.Form;
                 //}
@@ -44,12 +45,15 @@ namespace HttpContext
                     ? serviceProvider.GetService<LocalhostService>() as IService
                     : serviceProvider.GetService<CloudService>() as IService;
             });
-
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseDeveloperExceptionPage();
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
         }
