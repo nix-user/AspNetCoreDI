@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using ResolveAllServices.Services;
-using System.Linq;
 
 namespace ResolveAllServices
 {
@@ -15,10 +15,13 @@ namespace ResolveAllServices
             services.AddSingleton<IService, CloudService>();
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseDeveloperExceptionPage();
-            app.UseStaticFiles();
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
             app.UseMvcWithDefaultRoute();
         }
     }

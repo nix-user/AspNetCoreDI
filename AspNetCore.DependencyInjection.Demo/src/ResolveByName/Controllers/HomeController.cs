@@ -36,12 +36,12 @@ namespace ResolveByName.Controllers
 
         public IActionResult LocalWithAttribute([FromNamedServices("local")] IService service)
         {
-            return this.View("Local", model: service.GetType().Name);
+            return this.View(nameof(Local), model: service.GetType().Name);
         }
 
         public IActionResult CloudWithAttribute([FromNamedServices("cloud")] IService service)
         {
-            return this.View("Cloud", model: service.GetType().Name);
+            return this.View(nameof(Cloud), model: service.GetType().Name);
         }
     }
 }
